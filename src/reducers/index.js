@@ -4,7 +4,6 @@
 import {combineReducers} from 'redux-immutable';
 import {LOCATION_CHANGE} from 'react-router-redux';
 import Immutable from 'immutable';
-
 const initialState = Immutable.fromJS({
   locationBeforeTransitions: null
 });
@@ -18,9 +17,11 @@ function routerReducer(state = initialState, action){
   return state;
 }
 
+import items from './items'
 //使用redux的combineReducers方法将所有reducer打包起来
 const rootReducer = combineReducers({
-  routing:routerReducer
+  routing:routerReducer,
+  items
 });
 
 export default rootReducer
