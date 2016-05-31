@@ -8,10 +8,7 @@ import immutable from 'immutable';
  * Logger函数定义
  */
 const logger = createLogger({
-  stateTransformer: (state) => {
-    let newState = state.toJS();
-    return newState;
-  }
+  stateTransformer: (state) => state.toJS()
 });
 /**
  * thunkMiddleware:允许我们 dispatch()函数
