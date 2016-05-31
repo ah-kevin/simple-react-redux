@@ -35,6 +35,9 @@ module.exports = {
       sources: `${defaultSettings.srcPath}/sources/`,
       stores: `${defaultSettings.srcPath}/stores/`,
       styles: `${defaultSettings.srcPath}/styles/`,
+      constants: `${defaultSettings.srcPath}/constants/`,
+      reducers: `${defaultSettings.srcPath}/reducers/`,
+      containers: `${defaultSettings.srcPath}/containers/`,
       config: `${defaultSettings.srcPath}/config/` + process.env.REACT_WEBPACK_ENV
     }
   },
