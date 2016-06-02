@@ -2,20 +2,7 @@
  * Created by dg_lennon on 16/5/31.
  */
 import {combineReducers} from 'redux-immutable';
-import {LOCATION_CHANGE} from 'react-router-redux';
-import Immutable from 'immutable';
-const initialState = Immutable.fromJS({
-  locationBeforeTransitions: null
-});
-function routerReducer(state = initialState, action){
-  if (action.type === LOCATION_CHANGE) {
-    return state.merge({
-      locationBeforeTransitions: action.payload
-    });
-  }
-
-  return state;
-}
+import routerReducer from './router-reducer';
 
 import items from './items'
 //使用redux的combineReducers方法将所有reducer打包起来
